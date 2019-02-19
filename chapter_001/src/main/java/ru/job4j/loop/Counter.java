@@ -16,13 +16,10 @@ public class Counter {
      */
     public int add(int start, int finish) {
         int sum = 0;
-        double even = (double)start;
-        for (int i = start; i <= finish; i++) {
-
-            if (even % 2 == 0) {
-                sum = sum + (int) even;
+             for (int i = start; i <= finish; i++) {
+            if ((double)i % 2 == 0) {
+                sum = sum + i;
             }
-            even++;
         }
         return sum;
     }
