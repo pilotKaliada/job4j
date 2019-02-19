@@ -18,8 +18,6 @@ public class Factorial {
         for (int i = 1; i <= n; i++) {
             factorial = factorial * i;
         }
-        if (n == 0) {
-            return 1;
-        } else return factorial;
+        return factorial;
     }
 }
