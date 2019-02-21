@@ -26,7 +26,41 @@ public class Paint {
             screen.append(System.lineSeparator());
         }
         return screen.toString();
+    }
 
+    /**
+     * Строит правую полупирамиду заданной высоты
+     *
+     * @param height высота пирамиды.
+     * @return строка в виде пирамиды
+     */
+    public String rightTrl(int height) {
+        StringBuilder screen = new StringBuilder();
+        for (int j = 0; j < height; j++) {
+            for (int i = 0; i < height; i++) {
+                if (i <= j) {
+                    screen.append("^");
+                } else {
+                    screen.append(" ");
+                }
+            }
+            screen.append(System.lineSeparator());
+        }
+        return screen.toString();
+    }
+
+    public String leftTrl(int height) {
+        StringBuilder screen = new StringBuilder();
+        for (int j = 0; j < height; j++) {
+            for (int i = 0; i < height; i++) {
+                if (i < height - j - 1) {
+                    screen.append(" ");
+                } else {
+                    screen.append("^");
+                }
+            }
+            screen.append(System.lineSeparator());
+        }
+        return screen.toString();
     }
 }
-
