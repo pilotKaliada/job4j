@@ -14,16 +14,10 @@ public class Turn {
      */
     public int[] back(int[] array) {
         int n;
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length / 2; i++) {
             n = array[i];
             array[i] = array[array.length - 1 - i];
             array[array.length - 1 - i] = n;
-            if (array.length % 2 == 0 && array.length / 2 - 1 == i) {
-                break;
-            } else if ((array.length - 1) / 2 == i) {
-                break;
-            }
-
         }
         return array;
     }
