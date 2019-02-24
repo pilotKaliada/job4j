@@ -13,12 +13,12 @@ public class Check {
      * @return true - если массив однороден, false - если не однороден.
      */
     public boolean mono(boolean[] data) {
-        boolean result = false;
+        boolean result = true;
         for (boolean datum : data) {
             if (data[0] != datum) {
                 result = false;
                 break;
-            } else result = true;
+            }
         }
         return result;
     }
