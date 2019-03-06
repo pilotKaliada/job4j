@@ -16,28 +16,16 @@ public class ArrayDuplicate {
      * @return массив без дубликатов.
      */
     public String[] remove(String[] array) {
-        int x = 0;
-        for (int i = 0; i < array.length; i++) {
-            for (int j = i + 1; j < array.length; j++) {
+        int unique = array.length;
+        for (int i = 0; i < unique; i++) {
+            for (int j = i + 1; j < unique; j++) {
                 if (array[j].equals(array[i])) {
-                    array[j] = "x";
+                    array[j] = array[unique - 1];
+                    unique--;
+                    j--;
                 }
             }
         }
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length - 1; j++) {
-                if (array[j].equals("x")) {
-                    array[j] = array[j + 1];
-                    array[j + 1] = "x";
-                }
-            }
-        }
-        for (String n : array) {
-            if (n.equals("x")) {
-                x++;
-            }
-        }
-        return Arrays.copyOf(array, array.length - x);
+        return Arrays.copyOf(array, unique);
     }
-
 }
