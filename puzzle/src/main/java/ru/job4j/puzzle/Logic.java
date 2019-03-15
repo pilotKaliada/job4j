@@ -76,7 +76,7 @@ public class Logic {
                 sumHorizont = sumHorizont + table[j][i];
                 sumVertical = sumVertical + table[i][j];
             }
-            if (sumHorizont == table.length || sumVertical == 0) {
+            if (sumHorizont == table.length || sumVertical == table.length) {
                 result = true;
                 break;
             } else {
