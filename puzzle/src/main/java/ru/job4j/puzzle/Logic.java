@@ -69,7 +69,6 @@ public class Logic {
     public boolean isWin() {
         int[][] table = this.convert();
         boolean result = false;
-<<<<<<< HEAD
         int sumHorizont = 0;
         int sumVertical = 0;
         for (int j = 0; j < table.length; j++) {
@@ -83,32 +82,7 @@ public class Logic {
             } else {
                 sumHorizont = 0;
                 sumVertical = 0;
-=======
-        int meter = 0;
-        for (int[] data : table) {
-            for (int cell : data) {
-                if (cell == 0) {
-                    break;
-                } else meter++;
-            }
-            if (meter == table.length) {
-                result = true;
-                break;
-            } else meter = 0;
-        }
-        if (result == false) {
-            meter = 0;
-            for (int cell = 0; cell < table.length; cell++) {
-                for (int row = 0; row < table.length; row++) {
-                    if (table[row][cell] == 0) {
-                        break;
-                    } else meter++;
-                }
-                if (meter == table.length) {
-                    result = true;
-                    break;
-                } else meter = 0;
->>>>>>> 65f49d2... Пазлы. Тестовое задание.[#109966]
+
             }
         }
         return result;
