@@ -17,15 +17,31 @@ public class ArraysSelect {
 
     public int[] merge(int[] left, int[] right) {
         int[] merge = new int[left.length + right.length];
-        for (int i = 0; i < left.length; i++) {
-            if (left[i] < right[i]) {
-                merge[i * 2] = left[i];
-                merge[i * 2 + 1] = right[i];
+        int i = 0, j = 0, n = 0;
+        while (i < left.length && j < right.length) {
+            if (left[i] < right[j]) {
+                merge[n] = left[i];
+                n++;
+                i++;
             } else {
-                merge[i * 2] = right[i];
-                merge[i * 2 + 1] = left[i];
+                merge[n] = right[j];
+                n++;
+                j++;
             }
-
+        }
+        if (j < left.length) {
+            while (n < merge.length) {
+                merge[n] = right[j];
+                n++;
+                j++;
+            }
+        }
+        if (i < left.length) {
+            while (n < merge.length) {
+                merge[n] = left[i];
+                n++;
+                i++;
+            }
         }
         return merge;
     }
