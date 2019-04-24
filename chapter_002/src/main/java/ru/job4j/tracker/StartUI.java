@@ -44,7 +44,7 @@ public class StartUI {
                 case "5":
                     this.findItemsByName();
                     break;
-
+                default:
             }
         }
     }
@@ -60,8 +60,9 @@ public class StartUI {
 
     private void showAllItems() {
         System.out.println("------------ Показ всех заявок --------------");
-        for (Item item : this.tracker.findAll())
+        for (Item item : this.tracker.findAll()) {
             System.out.println(item);
+        }
     }
 
     private void editItem() {
@@ -73,7 +74,9 @@ public class StartUI {
         String result;
         if (this.tracker.replace(id, item)) {
             result = "Yes";
-        } else result = "No";
+        } else {
+            result = "No";
+        }
         System.out.println(String.format("%s%s%s%s", "заявка c id:", id, " отредактирована:", result));
     }
 
@@ -83,7 +86,9 @@ public class StartUI {
         String result;
         if (this.tracker.delete(id)) {
             result = "Yes";
-        } else result = "No, проверьте Id заявки";
+        } else {
+            result = "No, проверьте Id заявки";
+        }
         System.out.println(String.format("%s%s%s%s", "заявка c id ", id, " удалена:", result));
     }
 
