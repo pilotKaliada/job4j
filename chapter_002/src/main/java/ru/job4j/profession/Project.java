@@ -7,6 +7,22 @@ package ru.job4j.profession;
  */
 
 public class Project {
-    Program program;
-    Building building;
+    private Program program;
+    private Building building;
+
+    public Program getProgram() {
+        return this.program;
+    }
+
+    public void setProgram(Program program) {
+        this.program = program;
+    }
+
+    public Building getBuilding() {
+        return this.building;
+    }
+
+    public void setBuilding(Building building) {
+        this.building = building;
+    }
 }

@@ -9,6 +9,6 @@ package ru.job4j.profession;
 public class Surgeon extends Doctor {
 
     public Body bodyHeal(Pacient pacient) {
-        return pacient.diagnose.body;
+        return pacient.getDiagnose().getBody();
     }
 }

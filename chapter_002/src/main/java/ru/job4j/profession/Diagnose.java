@@ -6,6 +6,22 @@ package ru.job4j.profession;
  * @since 1.0
  */
 public class Diagnose {
-    Tooth tooth;
-    Body body;
+    private Tooth tooth;
+    private Body body;
+
+    public Tooth getTooth() {
+        return this.tooth;
+    }
+
+    public void setTooth(Tooth tooth) {
+        this.tooth = tooth;
+    }
+
+    public Body getBody() {
+        return this.body;
+    }
+
+    public void setBody(Body body) {
+        this.body = body;
+    }
 }

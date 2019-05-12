@@ -27,4 +27,18 @@ public class Profession {
     public String getBirthday() {
         return this.birthday;
     }
+
+    public void setName(String name){
+        this.name=name;
+    }
+    public void setSurname (String surname){
+        this.surname=surname;
+    }
+    public void setEducation (String education){
+        this.education= education;
+    }
+    public void setBirthday(String birthday){
+        this.birthday=birthday;
+    }
+
 }

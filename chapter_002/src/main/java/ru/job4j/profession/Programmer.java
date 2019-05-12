@@ -8,6 +8,6 @@ package ru.job4j.profession;
 
 public class Programmer extends Engineer {
     public Program programOrder(Customer customer) {
-        return customer.project.program;
+        return customer.getProject().getProgram();
     }
 }

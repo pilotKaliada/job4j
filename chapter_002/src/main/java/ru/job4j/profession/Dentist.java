@@ -8,6 +8,6 @@ package ru.job4j.profession;
 
 public class Dentist {
     public Tooth toothHeal(Pacient pacient) {
-        return pacient.diagnose.tooth;
+        return pacient.getDiagnose().getTooth();
     }
 }

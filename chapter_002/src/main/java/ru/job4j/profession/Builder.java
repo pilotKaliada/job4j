@@ -7,6 +7,6 @@ package ru.job4j.profession;
  */
 public class Builder extends Engineer {
     public Building buildingOrder(Customer customer) {
-        return customer.project.building;
+        return customer.getProject().getBuilding();
     }
 }

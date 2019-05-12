@@ -6,5 +6,12 @@ package ru.job4j.profession;
  * @since 1.0
  */
 public class Pacient {
-    Diagnose diagnose;
+    private Diagnose diagnose;
+
+    public Diagnose getDiagnose (){
+        return this.diagnose;
+    }
+    public void setDiagnose(Diagnose diagnose){
+        this.diagnose = diagnose;
+    }
 }
