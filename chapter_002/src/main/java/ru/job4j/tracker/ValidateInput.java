@@ -15,23 +15,17 @@ public class ValidateInput implements Input {
         boolean invalid = true;
         int value = -1;
         boolean n = false;
-        while (invalid) {
-            for (char c : question.toCharArray()) {
-                if (!Character.isDigit(c)) {
-                    throw new NumberFormatException("Please enter validate data again.");
-                }
+        do {
+            try {
+                value = this.input.ask(question, range);
+                invalid = false;
+            } catch (MenuOutException moe) {
+                System.out.println("Please select key from menu.");
+            } catch (NumberFormatException nfe) {
+                System.out.println("Please enter validate data again.");
             }
-            for (int x : range) {
-                if (x == Integer.valueOf(this.ask(question))) {
-                    n = true;
-                }
-            }
-            if (!n) {
-                throw new MenuOutException("Please select key from menu.");
-            }
-            value = this.input.ask(question, range);
-            invalid = false;
-        }
+
+        } while (invalid);
         return value;
     }
 }
